@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>1.1.5</title>
+
+</head>
+
+<body>
+  <script>
+  function reverseArray(toBeReversed) {
+  var reversed = [];
+  function reverser(toBeReversed) {
+    if (toBeReversed.length !== 0) {
+      reversed.push(toBeReversed.pop());
+      reverser(toBeReversed);
+    }
+  }
+  reverser(toBeReversed);
+  return reversed;
+}
+
+var list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(reverseArray(list));
+</script>
+</body>
+</html>

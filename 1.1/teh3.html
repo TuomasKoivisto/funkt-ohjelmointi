@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>1.1.3</title>
+
+</head>
+
+<body>
+  <script>
+function syt(p, q) {
+  if (q === 0) {
+    return p;
+  } else {
+    return syt(q, p % q);
+  }
+}
+
+function kjl(p, q) {
+  if (p === 0 || q === 0) {
+    return false;
+  } else {
+    var suurin = syt(p, q);
+    if (suurin === 1) {
+      return true;
+    } else if (suurin !== 1) {
+      return false;
+    } else {
+      "error";
+    }
+  }
+}
+console.log(kjl(10, 0));
+console.log(kjl(10, 5));
+console.log(kjl(100, 50));
+console.log(kjl(35, 18));
+</script>
+</body>
+</html>

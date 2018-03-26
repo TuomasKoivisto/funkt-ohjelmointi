@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>1.1.2</title>
+
+</head>
+
+<body>
+  <script>
+  function syt(p, q) {
+  if (q === 0) {
+    return p;
+  } else {
+    return syt(q, p % q);
+  }
+}
+console.log(syt(10, 0));
+console.log(syt(10, 5));
+console.log(syt(100, 50));
+console.log(syt(39, 13));
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>1.1</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script>
+const compare = (function() {
+  return function(x, y) {
+    if (x > y) {
+      return 1;
+    } else if (y > x) {
+      return -1;
+    } else if (x === y) {
+      return 0;
+    } else {
+      return 'parameters cannot be compared';
+    }
+  };
+})();
+console.log(compare(2, 1));
+console.log(compare(1, 2));
+console.log(compare(1, 1));
+console.log(compare('adsads', true));
+</script>
+</body>
+</html>
