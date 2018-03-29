@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>1.2.5</title>
+
+</head>
+
+<body>
+  <script>
+  'use strict';
+
+  const Moduuli = function(){
+    let counter = 0;
+    return {
+      kasvata: function() {
+        return counter++;
+      },
+      vahenna: function() {
+        return counter--;
+      }
+    }
+  }();
+
+  console.log(Moduuli.kasvata());
+  console.log(Moduuli.kasvata());
+  console.log(Moduuli.kasvata());
+  console.log(Moduuli.vahenna());
+  console.log(Moduuli.vahenna());
+  console.log(Moduuli.vahenna());
+
+</script>
+</body>
+</html>
