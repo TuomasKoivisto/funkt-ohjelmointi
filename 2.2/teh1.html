@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>2.2.1</title>
+
+</head>
+
+<body>
+  <script>
+let normaaliMaki = function(kPiste, lisapisteet) {
+    function laskePisteet (pituus) {
+      let pisteet;
+      if (pituus < kPiste) {
+        pisteet = (pituus - kPiste) * lisapisteet;
+      } else if (pituus >= kPiste) {
+        pisteet = 60 + (pituus - kPiste) * lisäpisteet;
+      }
+    };
+    return laskePisteet;
+}
+
+console.log(normaaliMaki(50,2)(2))
+
+</script>
+</body>
+</html>

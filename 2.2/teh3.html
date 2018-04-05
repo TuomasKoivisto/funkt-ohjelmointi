@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>2.2.3</title>
+
+</head>
+
+<body>
+  <script>
+const Auto  = (function(){
+  const protect = new WeakMap();
+
+  class Auto {
+    constructor(tankki, matkamittari) {
+      if (typeof tankki == 'number' && typeof matkamittari == 'number') {
+        protect.set(this, {matkamittari})
+        this.tankki = tankki;
+      }
+    }
+
+    aja() {
+      protect.set(this, {matkamittari: protect.get(this).matkamittari + 100});
+      this.tankki = this.tankki - 10;
+      console.log('ajetaan');
+    }
+
+    getTankki() {
+      return this.tankki;
+    }
+    getMatkamittari() {
+      return protect.get(this).matkamittari;
+    }
+    taytaTankki() {
+      this.tankki = 100;
+    }
+  }
+  return Auto;
+})();
+
+const kaara = Object.freeze(new Auto(100,5000));
+// heittää virheen:
+// kaara.hello = () => {
+//   console.log('hello');
+// }
+// kaara.hello()
+
+const kaara2 = new Auto(100,5000);
+// toimii
+kaara2.hello = () => {
+  console.log('hello');
+}
+kaara2.hello()
+</script>
+
+</body>
+</html>

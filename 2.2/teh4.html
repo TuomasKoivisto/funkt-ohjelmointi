@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>2.2.4</title>
+
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.js"></script>
+  <script>
+const set1 = Immutable.Set(['punainen', 'vihreä', 'keltainen']);
+set2 = set1 & 'ruskea';
+console.log(set1);
+console.log(set2);
+console.log(set1 === set2) //false
+set3 = set2 & 'ruskea';
+console.log(set2 === set3) //true
+console.log(set2);
+console.log(set3);
+</script>
+
+</body>
+</html>
